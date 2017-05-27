@@ -61,3 +61,12 @@ which is equivalent to
     Create hosting.json file
     update program.cs to use hosting.json
     
+#7 [Install DotNetTools](https://github.com/aspnet/DotNetTools)
+  insert the following in [01_aspnetcore-angular-sample.csproj](https://github.com/DerejeKitaw/AspDotNetCore/blob/master/01_aspnetcore-angular-sample/01_aspnetcore-angular-sample.csproj)
+  <ItemGroup>
+        <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="1.0.0" />
+  </ItemGroup>
+
+  dotnet restore
+
+  Now insted of dotnet run use dotnet watch run
