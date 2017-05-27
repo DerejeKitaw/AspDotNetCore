@@ -55,4 +55,8 @@ which is equivalent to
 ##5a To check environment
     
         echo %ASPNETCORE_ENVIRONMENT%
-    create
+
+#6 Set up Development inviroment (Prefered way)
+    Create hosting.json file
+    update program.cs to use hosting.json
+    
