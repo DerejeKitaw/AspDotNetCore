@@ -46,12 +46,13 @@ which is equivalent to
 #5 Set up Development inviroment
 
     For window in power shell
-    `$Env:ASPNETCORE_ENVIROMENT = "Development"`
-
+        $Env:ASPNETCORE_ENVIRONMENT = "Development"
     For window in command line
-    `setx ASPNETCORE_ENVIROMENT "Development"`
+        setx ASPNETCORE_ENVIRONMENT "Development"
     For mac in command line
-    `export ASPNETCORE_ENVIROMENT "Development"`
+        export ASPNETCORE_ENVIRONMENT "Development"
 
-##5a To check enviroment
-    `echo %ASPNETCORE_ENVIROMENT%`
+##5a To check environment
+    
+        echo %ASPNETCORE_ENVIRONMENT%
+    create
