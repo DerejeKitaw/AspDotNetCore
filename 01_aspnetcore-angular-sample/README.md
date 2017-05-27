@@ -42,3 +42,15 @@ which is equivalent to
 
 #4 Start app
 `dotnet run`
+
+#5 Set up Development inviroment
+    For window in power shell
+    `$Env:ASPNETCORE_ENVIROMENT = "Development"`
+
+    For window in command line
+    `setx ASPNETCORE_ENVIROMENT "Development"`
+    For mac in command line
+    `export ASPNETCORE_ENVIROMENT "Development"`
+
+##5a To check enviroment
+    `echo %ASPNETCORE_ENVIROMENT%`
