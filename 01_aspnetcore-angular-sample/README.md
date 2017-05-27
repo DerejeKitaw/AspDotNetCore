@@ -44,6 +44,7 @@ which is equivalent to
 `dotnet run`
 
 #5 Set up Development inviroment
+
     For window in power shell
     `$Env:ASPNETCORE_ENVIROMENT = "Development"`
 
