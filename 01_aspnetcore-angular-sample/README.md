@@ -63,9 +63,10 @@ which is equivalent to
     
 #7 [Install DotNetTools](https://github.com/aspnet/DotNetTools)
   insert the following in [01_aspnetcore-angular-sample.csproj](https://github.com/DerejeKitaw/AspDotNetCore/blob/master/01_aspnetcore-angular-sample/01_aspnetcore-angular-sample.csproj)
-  <ItemGroup>
+  
+  `<ItemGroup>
         <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="1.0.0" />
-  </ItemGroup>
+  </ItemGroup>`
 
   dotnet restore
 
