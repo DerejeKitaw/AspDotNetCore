@@ -22,8 +22,9 @@ ASP.NET Core Web API                          | webapi          | [C#]          
 Solution File                                 | sln      
 
 
-To create new dotnet application with Angular
-#1 Create new application
+## To create new dotnet application with Angular
+
+# 1 Create new application
 
 `dotnet new angular`
 
@@ -31,16 +32,16 @@ which is equivalent to
 
 `yo aspnetcore-spa` and select Angular in yeoman generator.
 
-#2 Restore dotnet dependency
+# 2 Restore dotnet dependency
 `dotnet restore`
 
-#3 install all node dependency
+# 3 install all node dependency
 `npm install`
 
-#4 Start app
+# 4 Start app
 `dotnet run`
 
-#5 Set up Development inviroment
+# 5 Set up Development inviroment
 
     For window in power shell
         $Env:ASPNETCORE_ENVIRONMENT = "Development"
@@ -49,16 +50,16 @@ which is equivalent to
     For mac in command line
         export ASPNETCORE_ENVIRONMENT "Development"
 
-##5a To check environment
+## 5a To check environment
     
         echo %ASPNETCORE_ENVIRONMENT%
 
-#6 Set up Development inviroment (Prefered way)
+# 6 Set up Development inviroment (Prefered way)
     
     Create hosting.json file
     update program.cs to use hosting.json
     
-#7 [Install DotNetTools](https://github.com/aspnet/DotNetTools)
+# 7 [Install DotNetTools](https://github.com/aspnet/DotNetTools)
   insert the following in [01_aspnetcore-angular-sample.csproj](https://github.com/DerejeKitaw/AspDotNetCore/blob/master/01_aspnetcore-angular-sample/01_aspnetcore-angular-sample.csproj)
   
   `<ItemGroup>
