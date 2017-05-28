@@ -6,7 +6,8 @@
 * [Available commands from `dotnet new`](#available-commands-from-dotnet-new)
 * [Run `dotnet web`](#run-dotnet-web)
 * [Run `dotnet restore`](#run-dotnet-restore)
-* [Open file and explorer](#explore-file)
+* [Add SpaServices](#add-spa-services)
+* [Add npm package to bring node ](#create-npm-package)
 
 
 
@@ -67,5 +68,36 @@ dotnet new web
 ## [Run `dotnet restore`](#table-of-contents)
     This wll install all the newgate packages
 
-## [#explore-file](#table-of-contents)
-    add mvc and SpaServices
+## [Add SpaServices](#table-of-contents)
+ 
+*Enable aspnet prerendering tag helper by adding SpaService
+
+    ```bash
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
+        <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="1.1.0" />
+        ** <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
+  </ItemGroup>
+
+## [Create npm package](#table-of-contents)    
+```bash
+npm init -y  # y is to reply yess to all
+npm install --save aspnet-prerendering  # install pre rendering and save it to the package.json
+```
+
+
+*Add Spa services in _ViewImports.cshtml
+```bash
+@addTagHelper *, Microsoft.AspNetCore.SpaServices
+```
+* Now let us use the pre renderer
+In index.html
+```bash
+<div id="my-span" asp-prerender-module="clientApp/boot-server></div>
+```
+    This will through error for  `clientApp/boot-server` doesnt exist.
+
+* add folder `clientApp/boot-server`
