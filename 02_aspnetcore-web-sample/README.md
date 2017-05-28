@@ -70,7 +70,7 @@ dotnet new web
 
 ## [Add SpaServices](#table-of-contents)
  
-*Enable aspnet prerendering tag helper by adding SpaService [02_aspnetcore-web-sample.csproj](https://github.com/DerejeKitaw/AspDotNetCore/blob/master/02_aspnetcore-web-sample/02_aspnetcore-web-sample.csproj)
+* Enable aspnet prerendering tag helper by adding SpaService [02_aspnetcore-web-sample.csproj](https://github.com/DerejeKitaw/AspDotNetCore/blob/master/02_aspnetcore-web-sample/02_aspnetcore-web-sample.csproj)
 
 ```bash
     <ItemGroup>
@@ -89,7 +89,7 @@ npm install --save aspnet-prerendering  # install pre rendering and save it to t
 ```
 
 
-*Add Spa services in _ViewImports.cshtml
+* Add Spa services in _ViewImports.cshtml
 ```bash
 @addTagHelper *, Microsoft.AspNetCore.SpaServices
 ```
@@ -100,4 +100,16 @@ In index.html
 ```
     This will through error for  `clientApp/boot-server` doesnt exist.
 
-* add folder `clientApp/boot-server`
+* add folder `clientApp/boot-server`[boot-server.js](https://github.com/DerejeKitaw/AspDotNetCore/blob/master/02_aspnetcore-web-sample/clientApp/boot-server.js)
+
+```bash
+const prerendering = require('aspnet-prerendering');
+
+module.exports = prerendering.createServerRenderer(function(param){
+    return new Promise (function (resolve, reject){
+        var result = "<h1>Hello world, from JS!</h1>";
+
+        resolve({ html: result });
+    })
+});
+```
