@@ -6,6 +6,8 @@
 * [Available commands from `dotnet new`](#available-commands-from-dotnet-new)
 * [Run `dotnet web`](#run-dotnet-web)
 * [Run `dotnet restore`](#run-dotnet-restore)
+* [Open file and explorer](#explore-file)
+
 
 
 
@@ -63,4 +65,7 @@ dotnet new web
 ```
 
 ## [Run `dotnet restore`](#table-of-contents)
-    This wll install all the dependency
+    This wll install all the newgate packages
+
+## [#explore-file](#table-of-contents)
+    add mvc and SpaServices

@@ -1,0 +1,8 @@
+/Users/derejekitaw/00_Angular_Projects/00_references/02_Aspdotnet/AspDotNetCore/02_aspnetcore-web-sample/bin/Debug/netcoreapp1.1/02_aspnetcore-web-sample.deps.json
+/Users/derejekitaw/00_Angular_Projects/00_references/02_Aspdotnet/AspDotNetCore/02_aspnetcore-web-sample/bin/Debug/netcoreapp1.1/02_aspnetcore-web-sample.runtimeconfig.json
+/Users/derejekitaw/00_Angular_Projects/00_references/02_Aspdotnet/AspDotNetCore/02_aspnetcore-web-sample/bin/Debug/netcoreapp1.1/02_aspnetcore-web-sample.runtimeconfig.dev.json
+/Users/derejekitaw/00_Angular_Projects/00_references/02_Aspdotnet/AspDotNetCore/02_aspnetcore-web-sample/bin/Debug/netcoreapp1.1/02_aspnetcore-web-sample.dll
+/Users/derejekitaw/00_Angular_Projects/00_references/02_Aspdotnet/AspDotNetCore/02_aspnetcore-web-sample/bin/Debug/netcoreapp1.1/02_aspnetcore-web-sample.pdb
+/Users/derejekitaw/00_Angular_Projects/00_references/02_Aspdotnet/AspDotNetCore/02_aspnetcore-web-sample/obj/Debug/netcoreapp1.1/02_aspnetcore-web-sample.AssemblyInfo.cs
+/Users/derejekitaw/00_Angular_Projects/00_references/02_Aspdotnet/AspDotNetCore/02_aspnetcore-web-sample/obj/Debug/netcoreapp1.1/02_aspnetcore-web-sample.dll
+/Users/derejekitaw/00_Angular_Projects/00_references/02_Aspdotnet/AspDotNetCore/02_aspnetcore-web-sample/obj/Debug/netcoreapp1.1/02_aspnetcore-web-sample.pdb
