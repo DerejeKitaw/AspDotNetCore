@@ -122,6 +122,8 @@ module.exports = prerendering.createServerRenderer(function(param){
 # Install webpack globaly
 npm install -g webpack
 # Create `webpack.config.js` file
+
+# webpack --display-error-details
 ```
 ```bash
     const path = require('path');

@@ -4,10 +4,10 @@
         "target": "es5",
         "sourceMap": true,
         "lib": [
-            "es6","dom"
+            "es6", "dom"
         ]
     },
     "exclude": [
-        "bin","node_modules"
+        "bin", "node_modules"
     ]
 }
