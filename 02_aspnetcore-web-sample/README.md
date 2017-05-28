@@ -70,7 +70,7 @@ dotnet new web
 
 ## [Add SpaServices](#table-of-contents)
  
-*Enable aspnet prerendering tag helper by adding SpaService
+*Enable aspnet prerendering tag helper by adding SpaService [02_aspnetcore-web-sample.csproj](https://github.com/DerejeKitaw/AspDotNetCore/blob/master/02_aspnetcore-web-sample/02_aspnetcore-web-sample.csproj)
 
 ```bash
     <ItemGroup>
