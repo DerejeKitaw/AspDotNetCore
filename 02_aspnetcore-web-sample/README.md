@@ -80,8 +80,8 @@ dotnet new web
         ** <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
         <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
-  </ItemGroup>
-```
+    </ItemGroup>
+    ```
 ## [Create npm package](#table-of-contents)    
 ```bash
 npm init -y  # y is to reply yess to all
