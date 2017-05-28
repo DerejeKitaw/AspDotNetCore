@@ -12,7 +12,7 @@
 
 
 
-## To see available commands in aspdotnet core
+## [To see available commands in aspdotnet core](#table-of-contents)
 
 * [Back to Table of Contents](#table-of-contents)
 
