@@ -49,7 +49,6 @@ Derejes-MBP:02_aspnetcore-web-sample derejekitaw$
 ```
 
 ## [Available commands from `dotnet new`](#table-of-contents)
-* [Back to Table of Contents](#table-of-contents)
 ### Base on above output from `dotnet new` available dotnet commands are
 ```bash
 dotnet new console
@@ -59,11 +58,9 @@ dotnet new web
 ```
 
 ## [Run `dotnet web`](#table-of-contents)
-* [Back to Table of Contents](#table-of-contents)
 ```bash
 dotnet new web
 ```
 
 ## [Run `dotnet restore`](#table-of-contents)
-* [Back to Table of Contents](#table-of-contents)
     This wll install all the dependency
