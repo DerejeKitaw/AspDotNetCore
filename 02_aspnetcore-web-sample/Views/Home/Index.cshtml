@@ -1,7 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div id="my-span" asp-prerender-module="clientApp/boot-server"></div>
+<div id="my-span" 
+        asp-prerender-module="clientApp/dist/main-server"
+        asp-prerender-data="new {
+        isAdministator = true,
+        cookies = ViewContext.HttpContext.Request.Cookies
+    }" ></div>
 <div id="my-span" asp-></div>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
