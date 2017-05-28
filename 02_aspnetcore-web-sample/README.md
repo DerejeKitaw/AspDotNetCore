@@ -2,10 +2,10 @@
 
 ## Table of Contents
 
-* [Available commands in aspdotnet core](## To see available commands in aspdotnet core)
-* [Available commands from `dotnet new`](## Available commands from `dotnet new`)
-* [Run `dotnet web`](## Run `dotnet web`)
-* [Run `dotnet restore`](## Run `dotnet restore`)
+* [Available commands in aspdotnet core](# To see available commands in aspdotnet core)
+* [Available commands from `dotnet new`](# Available commands from `dotnet new`)
+* [Run `dotnet web`](# Run `dotnet web`)
+* [Run `dotnet restore`](# Run `dotnet restore`)
 
 
 
@@ -50,7 +50,7 @@ Derejes-MBP:02_aspnetcore-web-sample derejekitaw$
 
 ## Available commands from `dotnet new`
 
-# Base on above output from `dotnet new` available dotnet commands are
+### Base on above output from `dotnet new` available dotnet commands are
 ```bash
 dotnet new console
 dotnet new classlib
