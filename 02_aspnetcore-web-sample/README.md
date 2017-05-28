@@ -2,10 +2,10 @@
 
 ## Table of Contents
 
-* [Available commands in aspdotnet core](# To see available commands in aspdotnet core)
-* [Available commands from `dotnet new`](# Available commands from `dotnet new`)
-* [Run `dotnet web`](# Run `dotnet web`)
-* [Run `dotnet restore`](# Run `dotnet restore`)
+* [Available commands in aspdotnet core](#To-see-available-commands-in-aspdotnet-core)
+* [Available commands from `dotnet new`](#-Available-commands-from-`dotnet-new`)
+* [Run `dotnet web`](#-Run-`dotnet-web`)
+* [Run `dotnet restore`](#-Run-`dotnet-restore`)
 
 
 
