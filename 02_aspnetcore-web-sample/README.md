@@ -7,7 +7,9 @@
 * [Run `dotnet web`](#run-dotnet-web)
 * [Run `dotnet restore`](#run-dotnet-restore)
 * [Add SpaServices](#add-spa-services)
-* [Add npm package to bring node ](#create-npm-package)
+* [Add npm package to run node in aspDotNet ](#create-npm-package)
+* [Add Web Pack](#add-webpack)
+* [Add tsConfig.json](#create-tsconfig-json)
 
 
 
@@ -112,4 +114,62 @@ module.exports = prerendering.createServerRenderer(function(param){
         resolve({ html: result });
     })
 });
+```
+
+
+## [Add Webpack](#table-of-contents)
+```bash
+# Install webpack globaly
+npm install -g webpack
+# Create `webpack.config.js` file
+```
+```bash
+    const path = require('path');
+
+    module.exports = {
+        entry: { 'main-server': './clientApp/boot-server.ts' },
+        resolve: {
+            extensions: ['.js', '.ts']
+        },
+        module: {
+            loaders: [
+                {
+                    test: /\.ts$/, loader: 'ts-loader'
+                }
+            ]
+        },
+        target: 'node',
+        devtool: 'inline-source-map',
+        output: {
+            path: path.join(__dirname, './clientApp/dist'),
+            filename: '[name].js',
+            libraryTarget: 'commonjs'
+        }
+    };
+```
+
+## [Create tsconfig json](#table-of-contents) 
+
+```bash
+# Install typescript loader
+npm install --save ts-loader typescript
+# Create `tsconfig.json` file
+```
+```bash
+    {
+        "compilerOptions": {
+            "moduleResolution": "node",
+            "target": "es5",
+            "sourceMap": true,
+            "lib": [
+                "es6","dom"
+            ]
+        },
+        "exclude": [
+            "bin","node_modules"
+        ]
+    }
+```
+```bash
+# Create `boot-server.ts` file
 ```

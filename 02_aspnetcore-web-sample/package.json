@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aspnet-prerendering": "^2.0.5"
+    "aspnet-prerendering": "^2.0.5",
+    "ts-loader": "^2.1.0",
+    "typescript": "^2.3.3"
   }
 }
