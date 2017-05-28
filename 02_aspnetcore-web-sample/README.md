@@ -149,6 +149,32 @@ npm install -g webpack
         }
     };
 ```
+* webpack error fixed:
+`#ERROR in Entry module not found: Error: Cannot resolve 'file' or 'directory' `
+
+```bash
+    const path = require('path');
+
+    module.exports = {
+    entry: { 'main-server': './ClientApp/boot-server.ts' },
+    resolve: { 
+        modulesDirectories:['node_modules', 'src'],
+            extensions: ['', '.js', '.ts' ]
+    },
+    module: {
+        loaders: [
+        { test: /\.ts$/, loader: 'ts-loader' }
+        ]    
+    },
+    target: 'node',
+    devtool: 'inline-source-map',
+    output:  {
+        path: path.join(__dirname, './clientApp/dist'),
+        filename: '[name].js',
+        libraryTarget: 'commonjs'
+    }
+    };
+```
 
 ## [Create tsconfig json](#table-of-contents) 
 
@@ -174,4 +200,17 @@ npm install --save ts-loader typescript
 ```
 ```bash
 # Create `boot-server.ts` file
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "target": "es5",
+        "sourceMap": true,
+        "lib": [
+            "es6", "dom"
+        ]
+    },
+    "exclude": [
+        "bin", "node_modules"
+    ]
+}
 ```
