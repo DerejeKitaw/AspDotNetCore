@@ -5,7 +5,7 @@
 `Dotnet new`
 
 Templates                                    | Short Name      | Language      Tags          
-------------------------------------------------------------------------------------------
+---                                          | ---             | ---
 Console Application                           | console         | [C#], F#      Common/Console
 Class library                                 | classlib        | [C#], F#      Common/Library
 Unit Test Project                             | mstest          | [C#], F#      Test/MSTest   
