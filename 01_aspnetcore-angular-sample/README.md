@@ -99,27 +99,23 @@ namespace _01_aspnetcore_angular_sample
     }
 }
     ```
-# 7 [Install DotNetTools](https://github.com/aspnet/DotNetTools)
-  insert the following in [01_aspnetcore-angular-sample.csproj](https://github.com/DerejeKitaw/AspDotNetCore/blob/master/01_aspnetcore-angular-sample/01_aspnetcore-angular-sample.csproj)
-  
+# [7 Install DotNetTools](https://github.com/aspnet/DotNetTools)
+  Insert the following in [01_aspnetcore-angular-sample.csproj](https://github.com/DerejeKitaw/AspDotNetCore/blob/master/01_aspnetcore-angular-sample/01_aspnetcore-angular-sample.csproj)
   ```bash
   <ItemGroup>
         <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="1.0.0" />
   </ItemGroup>
   ```
+Now insted of dotnet run use dotnet watch run
 
-  dotnet restore
+# 8 Add less
 
-  Now insted of dotnet run use dotnet watch run
-
-#8 Add less
-
-    * Install less loader
-    ```bash
-        npm install --save less-loader less
-    ```
-    * Update webpack.config.js
-    ```bash
+## Install less loader
+```bash
+    npm install --save less-loader less
+```
+## Update webpack.config.js
+```bash
      module: {
             rules: [
                 { test: /\.ts$/, include: /ClientApp/, use: ['awesome-typescript-loader?silent=true', 'angular2-template-loader'] },
@@ -128,9 +124,9 @@ namespace _01_aspnetcore_angular_sample
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
             ]
         }
-    ```
-    ** add less-loader
-    ```bash
+```
+## add less-loader
+```bash
     module: {
             rules: [
                 { test: /\.ts$/, include: /ClientApp/, use: ['awesome-typescript-loader?silent=true', 'angular2-template-loader'] },
@@ -140,17 +136,17 @@ namespace _01_aspnetcore_angular_sample
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
             ]
         }
-    ```
-    * update css to less
-    ```bash
+```
+## update css to less
+```bash
     @Component({
     selector: 'app',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.less']
 })
-    ```
-    * add less syntax for checking
-    ```bash
+```
+## add less syntax for checking
+```bash
     @paddingTop: 50px;
 
 @media (max-width: 767px) {
@@ -160,5 +156,5 @@ namespace _01_aspnetcore_angular_sample
     }
 }
 
-    ```
-    * run `dotnet run` less should work
+```
+* run `dotnet run` less should work
