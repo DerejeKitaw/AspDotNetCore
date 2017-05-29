@@ -35,7 +35,7 @@ which is equivalent to
 # 2 Restore dotnet dependency
 `dotnet restore`
 
-# 3 install all node dependency
+# 3 Install all node dependency
 `npm install`
 
 # 4 Start app
@@ -57,15 +57,108 @@ which is equivalent to
 # 6 Set up Development inviroment (Prefered way)
     
     Create hosting.json file
+    ```bash
+    {
+    "server.url": "http://localhost:5000",
+    "environment": "Development"
+    }
+    ```
     update program.cs to use hosting.json
-    
+    ```bash
+    using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+
+namespace _01_aspnetcore_angular_sample
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var config = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            # optional true for development
+            .AddJsonFile("hosting.json", optional: true)
+            .Build();
+
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                #let to check all of config befor anthing happen
+                .UseConfiguration(config) 
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .UseStartup<Startup>()
+                .Build();
+
+            host.Run();
+        }
+    }
+}
+    ```
 # 7 [Install DotNetTools](https://github.com/aspnet/DotNetTools)
   insert the following in [01_aspnetcore-angular-sample.csproj](https://github.com/DerejeKitaw/AspDotNetCore/blob/master/01_aspnetcore-angular-sample/01_aspnetcore-angular-sample.csproj)
   
-  `<ItemGroup>
+  ```bash
+  <ItemGroup>
         <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="1.0.0" />
-  </ItemGroup>`
+  </ItemGroup>
+  ```
 
   dotnet restore
 
   Now insted of dotnet run use dotnet watch run
+
+#8 Add less
+
+    * Install less loader
+    ```bash
+        npm install --save less-loader less
+    ```
+    * Update webpack.config.js
+    ```bash
+     module: {
+            rules: [
+                { test: /\.ts$/, include: /ClientApp/, use: ['awesome-typescript-loader?silent=true', 'angular2-template-loader'] },
+                { test: /\.html$/, use: 'html-loader?minimize=false' },
+                { test: /\.css$/, use: [ 'to-string-loader', isDevBuild ? 'css-loader' : 'css-loader?minimize' ] },
+                { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
+            ]
+        }
+    ```
+    ** add less-loader
+    ```bash
+    module: {
+            rules: [
+                { test: /\.ts$/, include: /ClientApp/, use: ['awesome-typescript-loader?silent=true', 'angular2-template-loader'] },
+                { test: /\.html$/, use: 'html-loader?minimize=false' },
+                { test: /\.css$/, use: [ 'to-string-loader', isDevBuild ? 'css-loader' : 'css-loader?minimize' ] },
+                { test: /\.less/, include:  /ClientApp/, loader : 'raw-loader!less-loader'},
+                { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
+            ]
+        }
+    ```
+    * update css to less
+    ```bash
+    @Component({
+    selector: 'app',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.less']
+})
+    ```
+    * add less syntax for checking
+    ```bash
+    @paddingTop: 50px;
+
+@media (max-width: 767px) {
+    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+    .body-content {
+        padding-top: @paddingTop;
+    }
+}
+
+    ```
+    * run `dotnet run` less should work
