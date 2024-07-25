@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_aspnetcore-web-sample", "02_aspnetcore-web-sample\02_aspnetcore-web-sample.csproj", "{1146BB43-AE39-4AD1-A588-D3E9598B635D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_aspnetcore-angular-sample", "01_aspnetcore-angular-sample\01_aspnetcore-angular-sample.csproj", "{2FAA2DAC-873A-4B5C-91B6-C9361917F087}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1146BB43-AE39-4AD1-A588-D3E9598B635D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1146BB43-AE39-4AD1-A588-D3E9598B635D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1146BB43-AE39-4AD1-A588-D3E9598B635D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1146BB43-AE39-4AD1-A588-D3E9598B635D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FAA2DAC-873A-4B5C-91B6-C9361917F087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FAA2DAC-873A-4B5C-91B6-C9361917F087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FAA2DAC-873A-4B5C-91B6-C9361917F087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FAA2DAC-873A-4B5C-91B6-C9361917F087}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C1779C8-DE71-4D21-952E-877E98BA8C16}
+	EndGlobalSection
+EndGlobal

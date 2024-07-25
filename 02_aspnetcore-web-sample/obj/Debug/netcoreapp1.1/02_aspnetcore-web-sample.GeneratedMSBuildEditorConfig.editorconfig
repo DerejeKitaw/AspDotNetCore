@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = 02_aspnetcore-web-sample
+build_property.ProjectDir = /Users/derejekitaw/Desktop/SPFx/AspDotNetCore/02_aspnetcore-web-sample/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
